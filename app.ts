@@ -1,33 +1,29 @@
-// function add(n1, n2: number) {
-//   // typescript의 주요 원시타입은 모두 소문자 :number
-//   if (typeof n1 !== "number" || typeof n2 !== "number") {
-//     throw new Error("Incorrect input");
-//   }
+const person: {
+  name: string;
+  age: number;
+} = {
+  name: "kyahn",
+  age: 30,
+};
 
-//   return n1 + n2;
-// }
+console.log(person.name);
 
-// const number1 = 5;
-// const number2 = 2.8;
+const product: {
+  id: string;
+  price: number;
+  tag: string[];
+  detail: {
+    title: string;
+    description: string;
+  };
+} = {
+  id: "123",
+  price: 3000,
+  tag: ["useful", "strong"],
+  detail: {
+    title: "hi",
+    description: "hello",
+  },
+};
 
-// const result = add(number1, number2);
-// console.log(result);
-
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-  const result = n1 + n2;
-
-  if (showResult) {
-    console.log(phrase + result);
-  } else {
-    return result;
-  }
-}
-
-let number1: number;
-number1 = 5;
-const number2 = 2.8;
-const printResult = true;
-
-const resultPhrase = "Result is: ";
-
-add(number1, number2, printResult, resultPhrase);
+console.log(product);
