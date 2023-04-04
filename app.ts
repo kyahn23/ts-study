@@ -1,46 +1,17 @@
-// const person: {
-//   name: string;
-//   age: number;
-// } = {
-//   name: "kyahn",
-//   age: 30,
-// };
-
-// console.log(person.name);
-
-// const product: {
-//   id: string;
-//   price: number;
-//   tag: string[];
-//   detail: {
-//     title: string;
-//     description: string;
-//   };
-// } = {
-//   id: "123",
-//   price: 3000,
-//   tag: ["useful", "strong"],
-//   detail: {
-//     title: "hi",
-//     description: "hello",
-//   },
-// };
-
-// console.log(product);
-
-const person = {
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: [number, string];
+} = {
   name: "kyahn",
   age: 30,
   hobbies: ["Sports", "Game"],
+  role: [2, "author"],
 };
 
-let favoriteActivities: string[];
+// person.role.push("Admin");
+// person.role[1] = 10;
 
-favoriteActivities = ["Sports"];
-
+// person.role = [0, "admin", "user"];
 console.log(person);
-
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase());
-  // console.log(hobby.map()) // hobby 는 string
-}
