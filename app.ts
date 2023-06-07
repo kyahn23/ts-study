@@ -1,17 +1,25 @@
-let userInput: unknown;
-let userName: string;
+const add = (a: number, b: number) => {
+  return a + b;
+};
 
-userInput = 5;
-userInput = "lucky";
+console.log(add(2, 3));
 
-// userName = userInput; // error userInput: any >> ok
+const func = (arr: any[]) => {
+  return arr.reduce((acm, cur) => {
+    if (typeof acm === typeof cur) {
+      return acm + cur;
+    } else {
+      return null;
+    }
+  });
+};
 
-if (typeof userInput === "string") {
-  userName = userInput;
+console.log(func([1, 2]));
+
+console.log(func(["Hello", "World"]));
+
+const button = document.querySelector("button");
+
+if (button) {
+  button.addEventListener("click", (event) => console.log(event));
 }
-
-function generateError(message: string, code: number): never {
-  throw { message: message, errorCode: code };
-}
-
-generateError("error occurred", 500);
