@@ -30,7 +30,7 @@ console.log([...hobbies, "Game"]);
 console.log(["Game", ...hobbies]);
 
 const person = {
-  name: "kyahn",
+  firstName: "kyahn",
   age: 30,
 };
 
@@ -49,3 +49,9 @@ const add = (...numbers: number[]) => {
 const addNumbers = add(1.1, 2, 3, 4, 5);
 
 console.log(addNumbers);
+
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+console.log(hobbies, hobby1, hobby2);
+
+const { firstName: userName, age } = person; // alias userName
+console.log(userName, age);
